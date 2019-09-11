@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Pomelo.Mangos.Authentication.Core\Pomelo.Mangos.Authentication.Core.csproj" />
+  </ItemGroup>
+
+</Project>
