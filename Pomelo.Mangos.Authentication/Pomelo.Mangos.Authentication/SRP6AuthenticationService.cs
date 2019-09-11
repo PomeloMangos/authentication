@@ -33,7 +33,7 @@ namespace Pomelo.Mangos.Authentication
 
 			// Get Salt and Verifier
 			var srp6 = new SRP6();
-			srp6.CalculateVerifier(userName);
+			srp6.CalculateVerifier(userHashSha1Hex);
 
 			return new AccountVerificationInfo
 			{
