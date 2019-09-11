@@ -23,12 +23,9 @@ namespace Pomelo.Mangos.Authentication
 		/// <param name="byteCount">The count of bytes which the new <see cref="BigInteger"/> should be.</param>
 		/// <param name="random">A <see cref="random"/> instance used to generate random bytes.</param>
 		/// <returns>The created <see cref="BigInteger"/>.</returns>
-		public static BigInteger GenerateRandom(int byteCount, Random random)
+		public static BigInteger GenerateRandom(int byteCount, [NotNull] Random random)
 		{
-			if (random == null)
-			{
-				throw new ArgumentNullException(nameof(random));
-			}
+			if (random == null) throw new ArgumentNullException(nameof(random));
 
 			if (byteCount < 0)
 			{
@@ -50,10 +47,7 @@ namespace Pomelo.Mangos.Authentication
 		/// <returns>The created <see cref="BigInteger"/>.</returns>
 		public static BigInteger GenerateRandom(int byteCount, [NotNull] RandomNumberGenerator randomNumberGenerator)
 		{
-			if (randomNumberGenerator == null)
-			{
-				throw new ArgumentNullException(nameof(randomNumberGenerator));
-			}
+			if (randomNumberGenerator == null) throw new ArgumentNullException(nameof(randomNumberGenerator));
 
 			if (byteCount < 0)
 			{
